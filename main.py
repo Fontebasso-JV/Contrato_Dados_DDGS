@@ -59,11 +59,12 @@ def validar(csv):
 
 arquivo = st.file_uploader("Coloque aqui o seu arquivo para validar", type='csv')
 botao = st.button(label="Validar Arquivo")
-st.write("---")
+
 
 try:
 
     if botao:
+        st.write("---")
         with st.spinner("Validando..."):
             time.sleep(2)
             validar(arquivo)
