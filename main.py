@@ -58,6 +58,7 @@ def validar(csv):
         st.error(f'Erro na validação do arquivo! \n {Err}')
 
 arquivo = st.file_uploader("Coloque aqui o seu arquivo para validar", type='csv')
+st.write("---")
 botao = st.button(label="Validar Arquivo")
 
 try:
@@ -66,6 +67,5 @@ try:
         with st.spinner("Validando..."):
             time.sleep(2)
             validar(arquivo)
-            st.write("---")
 except Exception as err:
     st.error(f'Erro na tentativa de validação: {err}')
