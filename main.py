@@ -58,8 +58,8 @@ def validar(csv):
         st.error(f'Erro na validação do arquivo! \n {Err}')
 
 arquivo = st.file_uploader("Coloque aqui o seu arquivo para validar", type='csv')
-st.write("---")
 botao = st.button(label="Validar Arquivo")
+st.write("---")
 
 try:
 
