@@ -1,5 +1,5 @@
 from datetime import datetime
-from pydantic import BaseModel, EmailStr, PositiveInt, Field
+from pydantic import BaseModel, PositiveInt, Field
 
 class ContratoLayoutDDGS(BaseModel):
     """
@@ -15,15 +15,15 @@ class ContratoLayoutDDGS(BaseModel):
     nome_supervisor: str = Field(alias='Nome Supervisor')
     cod_cliente: int = Field(alias='Cód. Cliente')
     nome: str = Field(alias='Nome')
-    data_pedido: datetime = Field(alias='Data Pedido')
-    inicio_cadencia: datetime = Field(alias='Início Cadência',format='%d/%m/%Y %H:%M')
-    fim_cadencia: datetime = Field(alias='Fim Cadência',format='%d/%m/%Y %H:%M')
+    data_pedido: datetime = Field(alias='Data Pedido', format='%d/%m/%Y %H:%M')
+    inicio_cadencia: datetime = Field(alias='Início Cadência', format='%d/%m/%Y %H:%M')
+    fim_cadencia: datetime = Field(alias='Fim Cadência', format='%d/%m/%Y %H:%M')
     pedido: int = Field(alias='Pedido')
     vol_total_vendido: float = Field(alias='Vol. Total Vendido')
     vol_total_carregado: float = Field(alias='Vol. Total Carregado')
     vol_total_pendente: float = Field(alias='Vol. Total Pendente')
     forecast_total: float = Field(alias='Forecast Total')
-    nao_cadenciado: int = Field(alias='Não Cadenciado')
+    #nao_cadenciado: int = Field(alias='Não Cadenciado')
     forecast_jan_2024: float = Field(alias='Forecast jan/2024')
     carregado_jan_2024: float = Field(alias='Carregado jan/2024')
     forecast_fev_2024: float = Field(alias='Forecast fev/2024')
