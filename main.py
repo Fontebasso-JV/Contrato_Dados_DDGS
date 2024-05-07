@@ -64,9 +64,9 @@ botao = st.button(label="Validar Arquivo")
 try:
 
     if botao:
-        st.write("---")
         with st.spinner("Validando..."):
             time.sleep(2)
+            st.write("---")
             validar(arquivo)
 except Exception as err:
     st.error(f'Erro na tentativa de validação: {err}')
