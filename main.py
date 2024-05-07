@@ -36,7 +36,7 @@ def validar(csv):
                 st.error(erro)
         else:
             st.success('Arquivo Validado com Sucesso!')
-            st.subheader("Seu arquivo válido:")
+            st.subheader("Pré-Visualização do arquivo: ")
             st.dataframe(df)
 
             # Reordenar e remover colunas conforme necessário
