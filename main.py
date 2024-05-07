@@ -66,5 +66,6 @@ try:
         with st.spinner("Validando..."):
             time.sleep(2)
             validar(arquivo)
+            st.write("---")
 except Exception as err:
     st.error(f'Erro na tentativa de validação: {err}')
