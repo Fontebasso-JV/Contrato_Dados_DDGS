@@ -7,7 +7,8 @@ import time
 # Definir o modo wide como padrão
 st.set_page_config(
     layout="wide",
-    page_title="DDGS - Validação",)
+    page_title="DDGS - Validação",
+    page_icon='📝')
 
 st.title("DDGS Comercial - Validação de Arquivo")
 
