@@ -10,7 +10,7 @@ st.set_page_config(
     page_title="DDGS - Validação",
     page_icon='📝')
 
-st.title("DDGS Comercial - Validação de Arquivo v1")
+st.title("DDGS Comercial - Validação de Arquivo")
 
 def validar(csv):
     '''
