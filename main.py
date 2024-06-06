@@ -37,7 +37,7 @@ def validar(csv):
         else:
             st.success('Arquivo Validado com Sucesso!')
             st.subheader("Pré-Visualização do arquivo: ")
-            st.dataframe(df)
+            st.dataframe(df.head(11))
 
             # Reordenar e remover colunas conforme necessário
             df = df[['Status Pedido', 'Produto', 'Mercado', 'GEF', 'Nome Supervisor', 'Cód. Cliente',
