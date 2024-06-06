@@ -23,9 +23,9 @@ def validar(csv):
         for idx, row in df.iterrows():
             try:
                 # Convertendo as datas para o formato desejado
-                row['Início Cadência'] = pd.to_datetime(row['Início Cadência'], format='%d/%m/%Y %H:%M')
-                row['Data Pedido'] = pd.to_datetime(row['Data Pedido'], format='%d/%m/%Y %H:%M')
-                row['Fim Cadência'] = pd.to_datetime(row['Fim Cadência'], format='%d/%m/%Y %H:%M')
+                row['Início Cadência'] = pd.to_datetime(row['Início Cadência'], format='%d/%m/%Y')
+                row['Data Pedido'] = pd.to_datetime(row['Data Pedido'], format='%d/%m/%Y')
+                row['Fim Cadência'] = pd.to_datetime(row['Fim Cadência'], format='%d/%m/%Y')
                 ContratoLayoutDDGS(**row.to_dict())
             except Exception as error:
                 erros.append(f'Erro na linha: {idx+2}: {error}')
